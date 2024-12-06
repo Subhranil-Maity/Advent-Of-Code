@@ -24,25 +24,10 @@ for i in range(0, len(a)):
     n += abs(int(a[i]) - int(b[i]))
 
 print("Part One Answer is: ", n)
-
-c = {}
-
-
-def get_frequency(x: int) -> int:
-    m = 0
-    for i in b:
-        if x == int(i):
-            m = m+1
-    return m
-# for i in b:
-#     if c.get(i) is None:
-#         c[i] = 0
-#     else:
-#         c[i] = c[i] + 1
 m = 0
 
 for i in a:
     # if c.get(i) is None:
     #     continue
-    m = m + int(i)*get_frequency(int(i))
-print(m)
+    m = m + int(i)*b.count(i)
+print("Answer of da1 part2", m)
